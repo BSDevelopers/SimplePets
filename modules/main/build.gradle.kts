@@ -1,11 +1,9 @@
-import org.apache.tools.ant.filters.ReplaceTokens
-
 plugins {
     id("org.bsdevelopment.java-conventions")
 }
 
 group = "org.bsdevelopment.simplepets"
-description = "SimplePets-Core"
+description = "main"
 
 val versionModules = project(":versions").subprojects
 
@@ -15,7 +13,7 @@ dependencies {
     compileOnly(libs.brigadier)
 
     implementation(libs.pluginutils)
-    implementation(project(":SimplePets-API"))
+    implementation(project(":api"))
 
     // Fetch and add all the versions
     versionModules.forEach { versionProj ->

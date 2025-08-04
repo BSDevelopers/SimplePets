@@ -17,7 +17,7 @@ subprojects {
 paperweight.reobfArtifactConfiguration = io.papermc.paperweight.userdev.ReobfArtifactConfiguration.REOBF_PRODUCTION
 
 dependencies {
-    compileOnly(project(":SimplePets-API"))
+    compileOnly(project(":api"))
     implementation(libs.pluginutils)
     paperweight.paperDevBundle("$latestMinecraft")
 }

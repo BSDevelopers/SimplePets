@@ -1,7 +1,7 @@
 package org.bsdevelopment.simplepets;
 
-import org.bsdevelopment.simplepets.api.PetPlugin;
 import org.bsdevelopment.simplepets.api.NMSUtilities;
+import org.bsdevelopment.simplepets.api.PetPlugin;
 import org.bsdevelopment.simplepets.api.spawn.PetSpawnService;
 import org.bsdevelopment.simplepets.api.utils.HelperUtilities;
 import org.bukkit.plugin.java.JavaPlugin;

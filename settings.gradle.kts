@@ -6,7 +6,10 @@ pluginManagement {
 }
 
 rootProject.name = "SimplePets"
-include(":SimplePets-API")
-include(":SimplePets-Core")
+include(":api")
+include(":main")
 
 include(":versions:v1_21_4")
+
+project(":api").projectDir  = file("modules/api")
+project(":main").projectDir = file("modules/main")

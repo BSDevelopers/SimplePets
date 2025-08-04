@@ -12,7 +12,7 @@ group = "org.bsdevelopment.simplepets"
 
 dependencies {
     implementation(project(":versions")) {
-        exclude(module = "SimplePets-API")
+        exclude(module = "api")
     }
     paperweight.paperDevBundle("$mcVersion-R0.1-SNAPSHOT")
 }
