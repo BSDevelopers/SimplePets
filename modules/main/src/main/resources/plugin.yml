@@ -1,11 +1,7 @@
 name: SimplePets
+main: org.bsdevelopment.simplepets.PetCore
 version: 6.0
 authors:
   - brainsynder
   - Thatsmusic99
 api-version: 1.21
-main: org.bsdevelopment.simplepets.PetCore
-
-commands:
-  testcommand:
-    description: This is a test

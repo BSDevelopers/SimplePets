@@ -10,9 +10,9 @@ val versionModules = project(":versions").subprojects
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT")
-    compileOnly(libs.brigadier)
 
     implementation(libs.pluginutils)
+    implementation(libs.commandapi)
     implementation(project(":api"))
 
     // Fetch and add all the versions
@@ -40,6 +40,7 @@ tasks {
 
         var groupID = "org.bsdevelopment.simplepets"
 
+        relocate("dev.jorel.commandapi", "$groupID.libs.commandapi")
         relocate("com.eclipsesource.json", "$groupID.libs.json")
         relocate("com.github.Anon8281.universalScheduler", "$groupID.libs.scheduler")
         relocate("de.tr7zw.changeme.nbtapi", "$groupID.libs.nbtapi")
