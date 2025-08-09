@@ -5,8 +5,8 @@ import org.bsdevelopment.pluginutils.nbt.types.CompoundData;
 import org.bsdevelopment.pluginutils.version.ServerVersion;
 import org.bsdevelopment.pluginutils.version.VersionCompatibility;
 import org.bsdevelopment.simplepets.api.pet.PetType;
-import org.bsdevelopment.simplepets.api.pet.entity.PetEntity;
 import org.bsdevelopment.simplepets.api.pet.entity.PetDataHandler;
+import org.bsdevelopment.simplepets.api.pet.entity.PetEntity;
 import org.bsdevelopment.simplepets.api.spawn.FailureReason;
 import org.bsdevelopment.simplepets.api.spawn.PetSpawnResult;
 import org.bsdevelopment.simplepets.api.spawn.PetSpawnService;
@@ -74,7 +74,7 @@ public class SpawnService extends PetSpawnService {
         if (nmsClass == null) {
             reasonDetails.add(new PetSpawnResult.ReasonDetail(
                     FailureReason.UNAVAILABLE,
-                    "Pet type '" + type.name() + "' is not available on "
+                    "Pet type '" + type.getName() + "' is not available on "
                             + ServerVersion.getVersion().getVersionName() + '.'));
             return null;
         }
