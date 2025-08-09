@@ -5,10 +5,12 @@ import org.bsdevelopment.simplepets.api.pet.entity.PetEntity;
 import org.bukkit.entity.EntityType;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public interface PetType {
-    String name();
+    String getName();
 
     Class<? extends PetEntity> entityClass();
 
@@ -38,5 +40,9 @@ public interface PetType {
                             Class<? extends PetEntity> entityClass,
                             String textureID) {
         return register(name, entityClass, ItemBuilder.playerSkull("http://textures.minecraft.net/texture/" + textureID));
+    }
+
+    static Set<PetType> getPetTypes () {
+        return new HashSet<>(REGISTRY.values());
     }
 }

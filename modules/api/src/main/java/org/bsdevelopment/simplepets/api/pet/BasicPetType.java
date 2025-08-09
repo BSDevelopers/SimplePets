@@ -7,7 +7,7 @@ import org.bsdevelopment.pluginutils.version.VersionCompatibility;
 import org.bsdevelopment.simplepets.api.pet.entity.PetEntity;
 import org.bukkit.entity.EntityType;
 
-public record BasicPetType(String name, Class<? extends PetEntity> entityClass,
+record BasicPetType(String name, Class<? extends PetEntity> entityClass,
                            ItemBuilder builder) implements PetType {
 
     public BasicPetType(String name,
@@ -18,6 +18,11 @@ public record BasicPetType(String name, Class<? extends PetEntity> entityClass,
         // Set the pet’s display name on the builder.
         this.builder = builder.withName(Colorize.translateBungeeHex("&#c8f792" +
                 WordUtils.capitalize(name.toLowerCase().replace("_", " "))));
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
